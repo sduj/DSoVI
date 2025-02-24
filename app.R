@@ -2,8 +2,7 @@ library(shiny)
 library(shinyBS)
 library(mapview)
 
-myData <- readRDS("C:/Users/bobel/OneDrive - UCL/UCL/Project_S/shinyApp/input/myData.RDS")
-
+myData <- myData <- readRDS("input/myData.RDS")
 
 # Define UI for application
 ui <- fluidPage(
@@ -37,7 +36,7 @@ ui <- fluidPage(
     sidebarPanel(
       width = 3,
       # Crisis section
-      div(class = "section-heading", "Crisis",img(src = "C:/Users/bobel/Documents/logo-info.png")),
+      div(class = "section-heading", "Crisis",img(src = "logo-info.png")),
       selectInput("crisisChoice", "",
                   choices = c("High", "Medium", "Low")),
       selectInput("crisisChoice", "",
@@ -57,7 +56,7 @@ ui <- fluidPage(
     
     # Main panel for displaying outputs
     mainPanel(
-      img(src='C:/Users/bobel/Documents/logo-info.png', align = "right"),
+      img(src='logo-info.png', align = "right"),
       ### the rest of your code
       plotOutput("plot") # The plot will take the whole main panel
     )
