@@ -2,7 +2,7 @@ library(shiny)
 library(shinyBS)
 library(mapview)
 
-myData <- myData <- readRDS("input/myData.RDS")
+myData <- myData <- readRDS("Data/myData.RDS")
 
 # Define UI for application
 ui <- fluidPage(
